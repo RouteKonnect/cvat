@@ -236,7 +236,10 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 # https://github.com/pennersr/django-allauth
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 # set UI url to redirect after a successful e-mail confirmation
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/auth/login'
 OLD_PASSWORD_FIELD_ENABLED = True
@@ -455,7 +458,7 @@ RESTRICTIONS = {
     'project_limit': None,
 
     # this setting reduces task visibility to owner and assignee only
-    'reduce_task_visibility': False,
+    'reduce_task_visibility': True,
 
     # allow access to analytics component to users with the following roles
     'analytics_access': (
