@@ -38,11 +38,11 @@ export ACME_EMAIL= ssl_email
 ## Building
 
 ```
-docker pull 012680811047.dkr.ecr.eu-west-1.amazonaws.com/cvat:latest
+docker image pull 012680811047.dkr.ecr.eu-west-1.amazonaws.com/cvat:latest
 ```
 
 ```
-docker tag 012680811047.dkr.ecr.eu-west-1.amazonaws.com/cvat cvat
+docker image tag 012680811047.dkr.ecr.eu-west-1.amazonaws.com/cvat cvat
 ```
 
 > Note: If any changes were made to cvat_ui remember push and pull cvat_ui, and update docker-compose.deploy.yml
