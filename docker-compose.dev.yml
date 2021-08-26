@@ -16,12 +16,12 @@ services:
         CLAM_AV:
         INSTALL_SOURCES:
 
-  cvat_ui:
-    build:
-      context: .
-      args:
-        http_proxy:
-        https_proxy:
-        no_proxy:
-        socks_proxy:
-      dockerfile: Dockerfile.ui
+  # cvat_ui:
+  #   build:
+  #     context: .
+  #     args:
+  #       http_proxy:
+  #       https_proxy:
+  #       no_proxy:
+  #       socks_proxy:
+  #     dockerfile: Dockerfile.ui
