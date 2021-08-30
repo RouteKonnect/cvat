@@ -48,6 +48,7 @@ services:
       - cvat_data:/home/django/data
       - cvat_keys:/home/django/keys
       - cvat_logs:/home/django/logs
+      - ~/s3:/home/django/share
     networks:
       - cvat
 
@@ -93,6 +94,11 @@ volumes:
   cvat_data:
   cvat_keys:
   cvat_logs:
+  cvat_share:
+    driver_opts:
+      type: none
+      device: /s3/data
+      o: bind
 
 networks:
   cvat:
