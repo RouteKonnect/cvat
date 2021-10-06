@@ -6,7 +6,7 @@ Here are the steps I took and some notes on hosting cvat on aws lightsail runnin
 
 ```
 sudo apt update
-sudo apt install docker-compose
+sudo apt install docker-compose awscli s3fs
 ```
 
 Install Docker
