@@ -77,7 +77,13 @@ docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
 
 > Note: 2gb of ram was not enough to build cvat_ui
 
+## Hosting Reminders
+
+Edit the docker-compose.deploy.yml ALLOWED_HOSTS to include the host ip
+If hosting in AWS Lightsail add the networking rule for the 8080 port
+
 ## Finally
+
 ```
 docker-compose -f docker-compose.deploy.yml up -d
 ```
