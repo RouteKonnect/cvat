@@ -80,6 +80,7 @@ docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
 ## Hosting Reminders
 
 Edit the docker-compose.deploy.yml ALLOWED_HOSTS to include the host ip
+
 If hosting in AWS Lightsail add the networking rule for the 8080 port
 
 ## Finally
