@@ -40,11 +40,16 @@ sudo mkdir -p /s3/data
 sudo apt install s3fs
 sudo nano /etc/passwd-s3fs
 ```
-Write: *<AWS_ACCESS_KEY_ID>:<AWS_SECRET_ACCESS_KEY>*
+Write: *<AWS_ACCESS_KEY_ID>:<AWS_SECRET_ACCESS_KEY>* into /etc/passwd-s3fs
+
+```
+sudo nano /etc/fuse.conf
+```
+Uncomment or add 'user_allow_other' from /etc/fuse.conf
 
 ```
 sudo chmod 600 /etc/passwd-s3fs
-sudo s3fs -o allow_other <bucket-name> /s3/data
+s3fs -o allow_other <bucket-name> /s3/data
 ```
 
 
@@ -82,6 +87,8 @@ docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
 Edit the docker-compose.deploy.yml ALLOWED_HOSTS to include the host ip
 
 If hosting in AWS Lightsail add the networking rule for the 8080 port
+
+Edit the volume path of cvat_share to the path of the mounted s3 buket
 
 ## Finally
 
